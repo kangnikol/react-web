@@ -5,10 +5,13 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import Grow from "@material-ui/core/Grow";
 
 const useStyle = makeStyles((theme) => ({
   card: {
     minWidth: "275",
+    justifyContent: "center",
+    alignItems: "center",
   },
   root: {
     display: "flex",
@@ -40,6 +43,9 @@ const useStyle = makeStyles((theme) => ({
     fontSize: "2rem",
     alignItems: "center",
   },
+  welcome: {
+    textAlign: "center",
+  },
 }));
 export default function Header() {
   const classes = useStyle();
@@ -61,12 +67,14 @@ export default function Header() {
         </Toolbar>
       </AppBar>
       <div className={classes.welcome}>
-        <Card className={classes.card} variant="outlined">
-          <CardContent>
-            <h1>ようこそ</h1>
-            <ExpandMoreIcon className={classes.iconDown} />
-          </CardContent>
-        </Card>
+        <Grow in={true} {...(true ? { timeout: 1000 } : {})}>
+          <Card className={classes.card} variant="outlined">
+            <CardContent>
+              <h1>ようこそ</h1>
+              <ExpandMoreIcon className={classes.iconDown} />
+            </CardContent>
+          </Card>
+        </Grow>
       </div>
     </div>
   );
