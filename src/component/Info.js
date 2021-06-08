@@ -4,7 +4,9 @@ import Details from "./Details";
 
 const useStyle = makeStyles((theme) => ({
   root: {
-    height: "100vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
 }));
 export default function Info() {
