@@ -5,7 +5,6 @@ import { CssBaseline } from "@material-ui/core";
 import Image from "./assets/images/bg/f12.jpg";
 import Header from "./component/Header";
 import Project from "./component/Project";
-import Info from "./component/Info";
 
 const useStyle = makeStyles((theme) => ({
   root: {
@@ -23,7 +22,6 @@ function App() {
       <CssBaseline />
       <Header />
       <Project />
-      <Info />
     </div>
   );
 }
