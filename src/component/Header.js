@@ -4,6 +4,11 @@ import { AppBar, Toolbar } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import Grow from "@material-ui/core/Grow";
 import Typography from "@material-ui/core/Typography";
+import ListItem from "@material-ui/core/ListItem";
+import List from "@material-ui/core/List";
+import Image from "../assets/images/bg/f12.jpg";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
 
 const useStyle = makeStyles((theme) => ({
   card: {
@@ -16,6 +21,9 @@ const useStyle = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     height: "100vh",
+    backgroundImage: `url(${Image})`,
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
   },
   appbar: {
     background: "none",
@@ -44,6 +52,15 @@ const useStyle = makeStyles((theme) => ({
   welcome: {
     width: "80%",
     margin: "0 auto",
+    color: "#fff",
+  },
+  stroke: {
+    color: "#000",
+    borderColor: "#fff",
+  },
+  li: {
+    display: "flex",
+    flexDirection: "row",
   },
 }));
 export default function Header() {
@@ -55,13 +72,17 @@ export default function Header() {
           <h1 className={classes.appbarTitle}>
             Senja<span className={classes.text}>Solusi</span>
           </h1>
+          <IconButton aria-label="menu" className={classes.menuButton}>
+            <MenuIcon />
+          </IconButton>
         </Toolbar>
       </AppBar>
       <div className={classes.welcome}>
         <Grow in={true} {...(true ? { timeout: 1000 } : {})}>
           <Typography inline variant="h2" component="h2" align="left">
-            WE GENERATER <br />
-            CREATIVE &<br /> NOVATION IDEA
+            WE BRING <br />
+            <span className={classes.stroke}>YOUR</span> IDEAS
+            <br /> TO LIFE
             <br />
             <Button variant="outlined">LEARN MORE</Button>
           </Typography>
