@@ -3,17 +3,9 @@ import eruda from "eruda";
 import { makeStyles } from "@material-ui/core/styles";
 import { CssBaseline } from "@material-ui/core";
 import Image from "./assets/images/bg/f12.jpg";
-import Header from "./component/Header";
-import Project from "./component/Project";
-import About from "./component/About"
+import Nav from "./component/Nav"
 
 const useStyle = makeStyles((theme) => ({
-  root: {
-    minHeight: "100vh",
-    backgroundImage: `url(${Image})`,
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-  },
 }));
 function App() {
   const classes = useStyle();
@@ -21,9 +13,7 @@ function App() {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <Header />
-      <Project />
-      <About />
+      <Nav />
     </div>
   );
 }
