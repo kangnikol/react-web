@@ -1,65 +1,25 @@
-import React, { useEffect } from "react";
+import React from 'react'
 import { makeStyles } from "@material-ui/core/styles";
-import {
-  Grid,
-  List,
-  Typography,
-  ListItem,
-  Divider,
-  Paper
-} from "@material-ui/core";
-import Aos from "aos";
+import { Grid, Card, Typography } from "@material-ui/core";
+
 const useStyle = makeStyles(theme => ({
   root: {
-    display: "flex",
+    height: "100vh",
     justifyContent: "center",
     alignItems: "center",
-    height: "400vh",
-    backgroundColor: "#fff",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat"
-  },
-  about: {
-    display: "flex",
-    justifyContent: "center",
-    width: "80%",
-    margin: "0 auto"
-  },
-  infoTxt: {
-    marginTop: "50px",
-    paddingBottom: "50px"
-  },
-  listNumber: {
-    color: "#bdc9d5"
-  },
-  num: {
-    paddingRight: "20px"
+    backgroundColor: "#fff"
   }
 }));
 
 function About() {
-  useEffect(() => {
-    Aos.init({ timeout: 2000 });
-  }, []);
-  const classes = useStyle();
-  return (
-    <div className={classes.root}>
-      <div className={classes.about}>
-        <Grid container spacing={3}>
-          <Grid item xs={2}>
-            <Paper variant="outlined">
-              <Typography variant="h2">
-                Who Are We
-              </Typography>
-            </Paper>
-          </Grid>
-          <Grid item xs={8}>
-            <Paper variant="outlined" />
-          </Grid>
-        </Grid>
-      </div>
-    </div>
-  );
+    const classes = useStyle()
+    return (
+        <div className={classes.root}>
+            <Grid container direction="row" justify="center" alignItems="center" spacing={5}>
+                
+            </Grid>
+        </div>
+    )
 }
 
-export default About;
+export default About

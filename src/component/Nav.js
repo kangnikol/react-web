@@ -41,12 +41,11 @@ const useStyle = makeStyles(theme => ({
   },
   icon: {
     color: "#000",
-    fontSize: "2rem"
   },
   appbarTitle: {
     color: "#ffffff",
     WebkitFlexGrow: "1",
-    fontFamily: "Nunito"
+    fontFamily: "Nunito",
   },
   wrapper: {
     width: "80%",
@@ -55,22 +54,9 @@ const useStyle = makeStyles(theme => ({
   text: {
     color: "#88C0D0"
   },
-  iconDown: {
-    color: "#000",
-    fontSize: "2rem",
-    alignItems: "center"
-  },
   welcome: {
     width: "80%",
-    margin: "0 auto",
-    color: "#fff"
-  },
-  stroke: {
-    color: "#000",
-    borderColor: "#fff"
-  },
-  li: {
-    alignItems: "left"
+    color: "#fff",
   },
   drawerPaper: {
     width: "200vh"
@@ -82,7 +68,7 @@ const useStyle = makeStyles(theme => ({
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
     justifyContent: "flex-end"
-  }
+  },
 }));
 
 const menuNavs = [
@@ -103,7 +89,7 @@ const menuNavs = [
   },
   {
     ListItem: "HOME"
-  },
+  }
 ];
 export default function Header() {
   useEffect(() => {
@@ -116,26 +102,6 @@ export default function Header() {
   const classes = useStyle();
 
   /*Sidebar section function*/
-  const menuNavs = [
-    {
-      listText: "HOME"
-    },
-    {
-      listText: "ABOUT"
-    },
-    {
-      listText: "PORTOFOLIO"
-    },
-    {
-      listText: "BLOGS"
-    },
-    {
-      listText: "HOME"
-    },
-    {
-      listText: "HOME"
-    },
-  ];
   const openNav = (slider, open) => () => {
     setState({ ...state, [slider]: open });
   };
@@ -167,7 +133,7 @@ export default function Header() {
             className={classes.menuButton}
             onClick={openNav("right", true)}
           >
-            <MenuIcon />
+            <MenuIcon className={classes.icon} />
           </IconButton>
         </Toolbar>
       </AppBar>
@@ -178,11 +144,15 @@ export default function Header() {
             <span className={classes.stroke}>YOUR</span> IDEAS
             <br /> TO LIFE
             <br />
-            <Button variant="outlined">LEARN MORE</Button>
+            <Button variant="outlined" className={classes.button}>LEARN MORE</Button>
           </Typography>
         </Grow>
-        <MUIDrawer anchor="right" open={state.right} onCLose={(openNav("right", true))}>
-          {sideNav("right")}
+        <MUIDrawer
+          anchor="right"
+          open={state.right}
+          onCLose={openNav("right", true)}
+        >
+          <Grid container className={classes.overlay}>{sideNav("right")}</Grid>
         </MUIDrawer>
       </div>
     </div>
