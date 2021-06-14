@@ -9,7 +9,7 @@ function Header() {
         <div className="row">
           <div className="colHeader col-5">
             <h1 className="headText">
-              We Bring <span className="stroke">Your</span> Ideas To{" "}
+              We Bring Your <span className="stroke">Ideas</span> To{" "}
               <span className="stroke">Life</span>{" "}
             </h1>
             <button type="button" className="btn btn-outline-dark">
