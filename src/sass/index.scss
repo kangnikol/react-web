@@ -20,7 +20,8 @@ body {
   }
 
   h2 {
-    text-shadow: 0 0 0 #000, 0 0 0 #000, 0 0 0 #000, 0 0 0 #000;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(0, 0, 0, 0),
+      0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(0, 0, 0, 0);
     font-family: "Lobster", cursive;
     color: $senja;
   }
