@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Card, Typography, Paper, Button, Box } from "@material-ui/core";
+import { Grid, Typography, Box, CardMedia } from "@material-ui/core";
 import "swiper/swiper-bundle.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "../css/Slider.css";
@@ -42,9 +42,9 @@ function Carousel() {
               </Box>
             </Grid>
             <Grid item>
-              <Card className={classes.cardImage}>
+              <CardMedia className={classes.cardImage}>
                 <h1>Image here</h1>
-              </Card>
+              </CardMedia>
             </Grid>
           </Grid>
         </SwiperSlide>
@@ -60,9 +60,9 @@ function Carousel() {
               </Box>
             </Grid>
             <Grid item>
-              <Card className={classes.cardImage}>
+              <CardMedia className={classes.cardImage}>
                 <h1>Image here</h1>
-              </Card>
+              </CardMedia>
             </Grid>
           </Grid>
         </SwiperSlide>

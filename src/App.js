@@ -1,27 +1,18 @@
 import React from "react";
 import eruda from "eruda";
-import { makeStyles } from "@material-ui/core/styles";
-import { CssBaseline } from "@material-ui/core";
-import Header from "./component/Nav"
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./css/index.css";
+import Nav from "./component/Nav";
+import Header from "./component/Header";
 import Portofolio from "./component/Portofolio"
-import About from "./component/About"
-import Carousel from "./component/Carousel"
 
-const useStyle = makeStyles((theme) => ({
-  root: {
-    
-  },
-}));
 function App() {
-  const classes = useStyle();
   eruda.init();
   return (
-    <div className={classes.root}>
-      <CssBaseline />
+    <div>
+      <Nav />
       <Header />
       <Portofolio />
-      <About />
-      <Carousel />
     </div>
   );
 }

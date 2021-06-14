@@ -1,0 +1,42 @@
+body {
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.nav {
+  padding: 15px;
+  background-color: transparent;
+  margin-bottom: 20px
+}
+
+.title {
+  color: #fff;
+}
+
+.headRoot {
+  min-height: 100vh;
+  background-image: url("../assets/images/bg/f12.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.colHeader {
+    margin-top: 180px;
+    padding: 50px;
+}
+
+.headText {
+    font-size: 5rem;
+}
+
+.portofolioRoot {
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.cardrow {
+    padding: 15px;
+}
