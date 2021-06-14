@@ -7,10 +7,11 @@ function Header() {
     <div className="headRoot">
       <div className="container">
         <div className="row">
-          <div className="colHeader">
-            <h1 className="headText">We Bring <br />
-            Your Ideas <br />
-            To Life <br /></h1>
+          <div className="colHeader col-5">
+            <h1 className="headText">
+              We Bring <span className="stroke">Your</span> Ideas To{" "}
+              <span className="stroke">Life</span>{" "}
+            </h1>
             <button type="button" className="btn btn-outline-dark">
               Learn More
             </button>

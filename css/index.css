@@ -12,13 +12,8 @@ body {
   margin-bottom: 20px;
 }
 
-.nav h2 {
-  font-family: "Lobster", cursive;
-  color: white;
-}
-
 .title {
-  color: #f17e3a;
+  color: #fff;
 }
 
 .headRoot {
@@ -27,10 +22,6 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.headRoot h1 span .stroke {
-  font-weight: 200px;
 }
 
 .colHeader {
@@ -43,8 +34,8 @@ body {
 }
 
 .portofolioRoot {
-  margin-top: 100px;
   background-color: #fff;
+  min-height: 100vh;
 }
 
 .cardrow {
